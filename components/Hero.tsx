@@ -5,9 +5,19 @@ const Hero: React.FC = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-secondary">
       
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://media.istockphoto.com/id/510477672/photo/shinjuku-business-district-tokyo-japan.jpg?s=2048x2048&w=is&k=20&c=kF_ZQqx5kHQzFWCj4FrkKjLD4Svosxq3m6Y5lVwBpsk=" 
+          alt="Tokyo Cityscape" 
+          className="w-full h-full object-cover opacity-40"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+
       {/* Darker Background Layer */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary from-10% via-[#003575] via-60% to-[#003176] to-80%"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary from-10% via-[#003575]/80 via-60% to-[#003176]/40 to-80%"></div>
         
         {/* Subtle Dot Pattern */}
         <div 
