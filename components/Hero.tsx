@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       
       {/* Darker Background Layer */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-[#103773] to-[#003176]"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary from-10% via-[#003575] via-60% to-[#003176] to-80%"></div>
         
         {/* Subtle Dot Pattern */}
         <div 
