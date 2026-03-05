@@ -1,6 +1,5 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
-import { motion } from 'framer-motion';
 import FadeIn from './animations/FadeIn';
 
 const StatsSection: React.FC = () => {
@@ -35,13 +34,12 @@ const StatsSection: React.FC = () => {
                 key={idx} 
                 delay={idx * 0.1}
               >
-                <motion.div 
-                  whileHover={{ scale: 1.05, borderColor: "rgba(234, 88, 12, 0.5)" }}
-                  className="text-center p-4 sm:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                <div 
+                  className="text-center p-4 sm:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-orange-500/50"
                 >
                   <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2 sm:mb-3 font-sans tracking-tight">{stat.value}</div>
                   <div className="text-xs sm:text-sm md:text-base text-gray-300 uppercase tracking-widest font-semibold">{stat.label}</div>
-                </motion.div>
+                </div>
               </FadeIn>
             ))}
           </div>

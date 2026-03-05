@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { motion, useInView, useAnimation } from 'motion/react';
+import { motion, useInView, useAnimation } from 'framer-motion';
 
 interface AnimatedCounterProps {
   value: string;

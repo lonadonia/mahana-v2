@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import FadeIn from './animations/FadeIn';
 
 const ContactSection: React.FC = () => {
@@ -87,14 +86,12 @@ const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <button
                   type="submit"
-                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md text-base sm:text-lg font-bold text-white bg-primary hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
+                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md text-base sm:text-lg font-bold text-white bg-primary hover:bg-orange-600 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300"
                 >
                   Free consultation
-                </motion.button>
+                </button>
               </form>
             </div>
           </div>

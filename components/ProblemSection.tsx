@@ -1,6 +1,5 @@
 import React from 'react';
 import { Languages, Search, ShieldAlert } from 'lucide-react';
-import { motion } from 'framer-motion';
 import FadeIn from './animations/FadeIn';
 
 const ProblemSection: React.FC = () => {
@@ -48,9 +47,8 @@ const ProblemSection: React.FC = () => {
               delay={idx * 0.1}
               className="h-full"
             >
-              <motion.div
-                whileHover={{ y: -5, borderColor: "rgba(234, 88, 12, 0.5)" }}
-                className="p-6 sm:p-10 rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 group h-full"
+              <div
+                className="p-6 sm:p-10 rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 group h-full hover:-translate-y-1 hover:border-orange-500/50"
               >
                 <div className={`w-16 h-16 sm:w-20 sm:h-20 ${prob.colorClass} rounded-2xl flex items-center justify-center mb-6 sm:mb-8 transition-transform group-hover:scale-110`}>
                   {prob.icon}
@@ -59,7 +57,7 @@ const ProblemSection: React.FC = () => {
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   {prob.description}
                 </p>
-              </motion.div>
+              </div>
             </FadeIn>
           ))}
         </div>

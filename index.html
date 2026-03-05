@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      // Attempt to make fetch writable to prevent errors from libraries trying to polyfill it
-      try {
-        const originalFetch = window.fetch;
-        Object.defineProperty(window, 'fetch', {
-          value: originalFetch,
-          writable: true,
-          configurable: true
-        });
-      } catch (e) {
-        console.warn('Could not make window.fetch writable:', e);
-      }
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahana | Japan Market Entry Specialists</title>
@@ -26,26 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    
-    <!-- Tailwind CSS (CDN Mode for Simplicity) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#F58220", 
-              secondary: "#0F2C59",
-              "surface-light": "#FFFFFF",
-              "surface-dark": "#1E1E1E",
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
     <style>
       html {
         scroll-behavior: smooth;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,14 +49,12 @@ const Navbar: React.FC = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
               href="#contact"
-              className="px-6 py-2.5 rounded-md bg-primary text-white hover:bg-orange-600 transition-all font-bold text-sm"
+              className="px-6 py-2.5 rounded-md bg-primary text-white hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-300 font-bold text-sm shadow-md hover:shadow-lg"
             >
               Free consultation
-            </motion.a>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,36 +70,31 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100 absolute w-full overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
+      {isMobileMenuOpen && (
+        <div
+          className="lg:hidden bg-white border-t border-gray-100 absolute w-full overflow-hidden transition-all duration-300 ease-in-out"
+        >
+          <div className="px-4 pt-2 pb-6 space-y-1">
+            {navLinks.map((link) => (
               <a
-                href="#contact"
-                className="block mt-4 text-center px-4 py-3 bg-primary text-white rounded-md font-bold"
+                key={link.name}
+                href={link.href}
+                className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Free consultation
+                {link.name}
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <a
+              href="#contact"
+              className="block mt-4 text-center px-4 py-3 bg-primary text-white rounded-md font-bold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Free consultation
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

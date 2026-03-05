@@ -1,6 +1,5 @@
 import React from 'react';
 import { TrendingUp, MousePointerClick, FileEdit, Handshake } from 'lucide-react';
-import { motion } from 'framer-motion';
 import FadeIn from './animations/FadeIn';
 
 const ServicesSection: React.FC = () => {
@@ -50,9 +49,8 @@ const ServicesSection: React.FC = () => {
               delay={idx * 0.1}
               className="h-full"
             >
-              <motion.div 
-                whileHover={{ y: -5, borderColor: "rgba(234, 88, 12, 0.5)" }}
-                className="bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 group cursor-default flex flex-col sm:flex-row gap-4 sm:gap-6 items-start h-full transition-colors duration-300"
+              <div 
+                className="bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 group cursor-default flex flex-col sm:flex-row gap-4 sm:gap-6 items-start h-full transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50"
               >
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-secondary border border-gray-100 group-hover:border-primary">
                   {service.icon}
@@ -63,21 +61,19 @@ const ServicesSection: React.FC = () => {
                     {service.desc}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </FadeIn>
           ))}
         </div>
 
         <div className="mt-12 sm:mt-20 text-center">
           <FadeIn delay={0.4}>
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-primary hover:bg-orange-600 transition-all"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-primary hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-300"
             >
               Free consultation
-            </motion.a>
+            </a>
           </FadeIn>
         </div>
       </div>

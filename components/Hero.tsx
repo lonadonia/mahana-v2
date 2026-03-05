@@ -1,6 +1,5 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 import FadeIn from './animations/FadeIn';
 
 const Hero: React.FC = () => {
@@ -9,13 +8,10 @@ const Hero: React.FC = () => {
       
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.img 
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.4 }}
-          transition={{ duration: 1.5 }}
+        <img 
           src="https://media.istockphoto.com/id/510477672/photo/shinjuku-business-district-tokyo-japan.jpg?s=2048x2048&w=is&k=20&c=kF_ZQqx5kHQzFWCj4FrkKjLD4Svosxq3m6Y5lVwBpsk=" 
           alt="Tokyo Cityscape" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-40 animate-[fadeIn_1.5s_ease-out]"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -34,16 +30,14 @@ const Hero: React.FC = () => {
         ></div>
 
         {/* Ambient Glows */}
-        <motion.div 
-          animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.1, 1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"
-        ></motion.div>
-        <motion.div 
-          animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.2, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"
-        ></motion.div>
+        <div 
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none animate-pulse"
+          style={{ animationDuration: '8s' }}
+        ></div>
+        <div 
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse"
+          style={{ animationDuration: '10s', animationDelay: '1s' }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
@@ -57,11 +51,8 @@ const Hero: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-sans font-bold text-white leading-tight tracking-tight">
               Entering Japan Is Not a <span className="text-primary relative inline-block">
                 Marketing Problem
-                <motion.span 
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ delay: 1, duration: 0.8 }}
-                  className="absolute bottom-1 left-0 h-1 bg-primary/30 -z-10"
+                <span 
+                  className="absolute bottom-1 left-0 h-1 bg-primary/30 -z-10 w-full"
                 />
               </span>. <br className="hidden lg:block" />
               It’s a Market Adaptation Problem.
@@ -88,22 +79,18 @@ const Hero: React.FC = () => {
           </FadeIn>
 
           <FadeIn delay={1.0} className="pt-8 sm:pt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-primary hover:bg-orange-600 transition-all w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-primary hover:bg-orange-600 hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto shadow-lg hover:shadow-primary/30"
             >
               Free consultation
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-              whileTap={{ scale: 0.98 }}
+            </a>
+            <a
               href="#why-us"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-white/20 text-base sm:text-lg font-bold rounded-md text-white hover:border-white/40 transition-all w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border border-white/20 text-base sm:text-lg font-bold rounded-md text-white hover:bg-white/10 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
             >
               Why us?
-            </motion.a>
+            </a>
           </FadeIn>
           
         </div>
