@@ -15,7 +15,7 @@ const App: React.FC = () => {
     <div className="bg-white text-gray-900 font-sans selection:bg-primary/20">
       <Navbar />
       <main>
-        <SectionWrapper><Hero /></SectionWrapper>
+        <Hero />
         <SectionWrapper><ProblemSection /></SectionWrapper>
         <SectionWrapper><ServicesSection /></SectionWrapper>
         <SectionWrapper><FrameworkSection /></SectionWrapper>
