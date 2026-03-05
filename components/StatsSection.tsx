@@ -1,5 +1,7 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
+import { motion } from 'framer-motion';
+import FadeIn from './animations/FadeIn';
 
 const StatsSection: React.FC = () => {
   const stats = [
@@ -29,15 +31,23 @@ const StatsSection: React.FC = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-2 gap-4 sm:gap-8 md:gap-10">
             {stats.map((stat, idx) => (
-              <div key={idx} className="text-center p-4 sm:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2 sm:mb-3 font-sans tracking-tight">{stat.value}</div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-300 uppercase tracking-widest font-semibold">{stat.label}</div>
-              </div>
+              <FadeIn 
+                key={idx} 
+                delay={idx * 0.1}
+              >
+                <motion.div 
+                  whileHover={{ scale: 1.05, borderColor: "rgba(234, 88, 12, 0.5)" }}
+                  className="text-center p-4 sm:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                >
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2 sm:mb-3 font-sans tracking-tight">{stat.value}</div>
+                  <div className="text-xs sm:text-sm md:text-base text-gray-300 uppercase tracking-widest font-semibold">{stat.label}</div>
+                </motion.div>
+              </FadeIn>
             ))}
           </div>
 
           {/* Testimonial */}
-          <div className="flex flex-col h-full justify-center">
+          <FadeIn delay={0.4} className="flex flex-col h-full justify-center">
             <Quote className="text-primary/40 mb-6 sm:mb-8 w-12 h-12 sm:w-20 sm:h-20" />
             <blockquote className="text-xl sm:text-2xl lg:text-3xl font-light italic leading-relaxed mb-8 sm:mb-10 text-gray-100">
               "Mahana didn't just translate our ads; they rebuilt our entire funnel for the Japanese mindset. The difference in engagement was immediate and profound."
@@ -51,7 +61,7 @@ const StatsSection: React.FC = () => {
                 <div className="text-sm sm:text-base text-primary font-medium">CMO, TechGlobal Solutions</div>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

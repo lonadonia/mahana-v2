@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Attempt to make fetch writable to prevent errors from libraries trying to polyfill it
+      try {
+        const originalFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          value: originalFetch,
+          writable: true,
+          configurable: true
+        });
+      } catch (e) {
+        console.warn('Could not make window.fetch writable:', e);
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahana | Japan Market Entry Specialists</title>

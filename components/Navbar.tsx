@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,8 +23,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 bg-white border-b border-gray-100 ${
-        isScrolled ? 'py-3 shadow-sm' : 'py-4'
+      className={`fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-gray-100 ${
+        isScrolled ? 'py-3' : 'py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,17 +44,20 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="px-6 py-2.5 rounded-md bg-primary text-white hover:bg-orange-600 transition-all font-bold text-sm shadow-sm hover:shadow-md"
+              className="px-6 py-2.5 rounded-md bg-primary text-white hover:bg-orange-600 transition-all font-bold text-sm"
             >
               Free consultation
-            </a>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,29 +73,36 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            {navLinks.map((link) => (
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white border-t border-gray-100 absolute w-full overflow-hidden"
+          >
+            <div className="px-4 pt-2 pb-6 space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
               <a
-                key={link.name}
-                href={link.href}
-                className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                href="#contact"
+                className="block mt-4 text-center px-4 py-3 bg-primary text-white rounded-md font-bold"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {link.name}
+                Free consultation
               </a>
-            ))}
-            <a
-              href="#contact"
-              className="block mt-4 text-center px-4 py-3 bg-primary text-white rounded-md font-bold"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Free consultation
-            </a>
-          </div>
-        </div>
-      )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
