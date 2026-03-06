@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
               className="h-full"
             >
               <div 
-                className="bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 group cursor-default flex flex-col sm:flex-row gap-4 sm:gap-6 items-start h-full transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50"
+                className="bg-white p-6 sm:p-10 rounded-2xl border-2 border-gray-300 shadow-md group cursor-default flex flex-col sm:flex-row gap-4 sm:gap-6 items-start h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary"
               >
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-secondary border border-gray-100 group-hover:border-primary">
                   {service.icon}

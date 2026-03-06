@@ -58,7 +58,7 @@ const FrameworkSection: React.FC = () => {
                 className="h-full"
               >
                 <div
-                  className={`bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 text-center md:text-left transition-all duration-300 h-full group hover:-translate-y-1 hover:border-orange-500/50`}
+                  className={`bg-white p-6 sm:p-8 rounded-2xl border-2 border-gray-300 shadow-md text-center md:text-left transition-all duration-300 h-full group hover:-translate-y-2 hover:shadow-xl hover:border-primary`}
                 >
                   <div
                     className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl mb-6 sm:mb-8 mx-auto md:mx-0 ring-4 sm:ring-8 ring-white bg-gray-50 text-secondary border-2 border-gray-200 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors duration-300"

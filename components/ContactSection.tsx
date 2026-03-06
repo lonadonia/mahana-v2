@@ -6,7 +6,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 sm:py-32 bg-gray-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+          <div className="bg-white rounded-2xl border-2 border-gray-300 overflow-hidden shadow-2xl">
             <div className="p-6 sm:p-12">
               <div className="text-center mb-6 sm:mb-8">
                 <div className="inline-flex items-center justify-center mb-4">

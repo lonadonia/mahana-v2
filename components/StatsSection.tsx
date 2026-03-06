@@ -35,7 +35,7 @@ const StatsSection: React.FC = () => {
                 delay={idx * 0.1}
               >
                 <div 
-                  className="text-center p-3 sm:p-6 lg:p-8 border border-white/10 rounded-2xl bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-primary/50 relative overflow-hidden group"
+                  className="text-center p-3 sm:p-6 lg:p-8 border-2 border-white/40 rounded-2xl bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:border-primary hover:shadow-[0_0_30px_rgba(242,125,38,0.4)] relative overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
                   <div className="relative z-10">

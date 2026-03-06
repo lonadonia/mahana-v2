@@ -53,7 +53,7 @@ const ProblemSection: React.FC = () => {
               className="h-full"
             >
               <div
-                className="p-6 sm:p-10 rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 group h-full hover:-translate-y-1 hover:border-orange-500/50"
+                className="p-6 sm:p-10 rounded-2xl bg-white border-2 border-gray-300 shadow-md transition-all duration-300 group h-full hover:-translate-y-2 hover:shadow-xl hover:border-primary"
               >
                 <div className={`w-16 h-16 sm:w-20 sm:h-20 ${prob.colorClass} rounded-2xl flex items-center justify-center mb-6 sm:mb-8 transition-transform group-hover:scale-110`}>
                   {prob.icon}

@@ -33,7 +33,7 @@ const ComparisonSection: React.FC = () => {
         </div>
 
         <FadeIn delay={0.4}>
-          <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-gray-300 overflow-hidden shadow-xl">
             
             {/* Desktop Table View */}
             <div className="hidden md:block overflow-x-auto">
@@ -73,14 +73,14 @@ const ComparisonSection: React.FC = () => {
                 <div key={idx} className="p-5 hover:bg-gray-50 transition-colors">
                   <h3 className="text-lg font-bold text-gray-900 mb-4 text-center border-b border-gray-100 pb-3">{row.feature}</h3>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="text-center p-3 bg-gray-50 rounded-xl border border-gray-100 flex flex-col justify-between">
+                    <div className="text-center p-3 bg-gray-100 rounded-xl border-2 border-gray-300 flex flex-col justify-between shadow-sm">
                       <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Typical Agency</div>
                       <span className="flex flex-col items-center gap-2 mt-auto">
                         <X className="text-red-400 w-6 h-6" />
                         <span className="text-sm text-gray-600 leading-tight">{row.global}</span>
                       </span>
                     </div>
-                    <div className="text-center p-3 bg-primary/5 rounded-xl border border-primary/20 flex flex-col justify-between shadow-sm">
+                    <div className="text-center p-3 bg-primary/10 rounded-xl border-2 border-primary flex flex-col justify-between shadow-md">
                       <div className="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Mahana</div>
                       <span className="flex flex-col items-center gap-2 mt-auto">
                         <Check className="text-green-500 w-6 h-6" />
