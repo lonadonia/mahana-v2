@@ -3,17 +3,24 @@ import FadeIn from './animations/FadeIn';
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-20 sm:py-24 bg-gray-50">
+    <section id="contact" className="py-20 sm:py-32 bg-gray-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
             <div className="p-6 sm:p-12">
-              <h2 className="text-3xl sm:text-4xl font-sans font-bold text-secondary mb-3 sm:mb-4 text-center">
-                Ready to Conquer the Japanese Market?
-              </h2>
-              <p className="text-gray-600 text-base sm:text-lg text-center mb-8 sm:mb-10">
-                Fill out the form below. Our strategists will review your site and provide a preliminary market assessment. We typically respond within 24 hours.
-              </p>
+              <div className="text-center mb-6 sm:mb-8">
+                <div className="inline-flex items-center justify-center mb-4">
+                  <span className="h-px w-8 bg-primary/50 mr-3"></span>
+                  <span className="text-primary font-bold tracking-wider uppercase text-sm">Get Started</span>
+                  <span className="h-px w-8 bg-primary/50 ml-3"></span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-sans font-bold text-secondary mb-3 sm:mb-4">
+                  Ready to Conquer the Japanese Market?
+                </h2>
+                <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+                  Fill out the form below. Our strategists will review your site and provide a preliminary market assessment. We typically respond within 24 hours.
+                </p>
+              </div>
               
               <form className="space-y-4 sm:space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

@@ -28,8 +28,13 @@ const FrameworkSection: React.FC = () => {
   return (
     <section id="framework" className="py-20 sm:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 sm:mb-20 text-center">
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <FadeIn>
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-px w-8 bg-primary/50 mr-3"></span>
+              <span className="text-primary font-bold tracking-wider uppercase text-sm">Our Process</span>
+              <span className="h-px w-8 bg-primary/50 ml-3"></span>
+            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-secondary mb-4 sm:mb-6 tracking-tight">
               Our 4-Step Japan Market Entry Framework
             </h2>

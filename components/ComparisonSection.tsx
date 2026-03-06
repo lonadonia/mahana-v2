@@ -14,14 +14,19 @@ const ComparisonSection: React.FC = () => {
   return (
     <section id="why-us" className="py-20 sm:py-32 bg-gray-50 border-y border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-secondary tracking-tight">
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-px w-8 bg-primary/50 mr-3"></span>
+              <span className="text-primary font-bold tracking-wider uppercase text-sm">The Mahana Advantage</span>
+              <span className="h-px w-8 bg-primary/50 ml-3"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-secondary mb-4 sm:mb-6 tracking-tight">
               Why Partner with Mahana?
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="mt-4 sm:mt-6 text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
               We are not a generalist agency. We are specialists focused entirely on bridging the gap between global brands and the Japanese market.
             </p>
           </FadeIn>

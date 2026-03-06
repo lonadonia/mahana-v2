@@ -35,10 +35,13 @@ const StatsSection: React.FC = () => {
                 delay={idx * 0.1}
               >
                 <div 
-                  className="text-center p-4 sm:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-orange-500/50"
+                  className="text-center p-3 sm:p-6 lg:p-8 border border-white/10 rounded-2xl bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-primary/50 relative overflow-hidden group"
                 >
-                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2 sm:mb-3 font-sans tracking-tight">{stat.value}</div>
-                  <div className="text-xs sm:text-sm md:text-base text-gray-300 uppercase tracking-widest font-semibold">{stat.label}</div>
+                  <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                  <div className="relative z-10">
+                    <div className="text-3xl sm:text-4xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 mb-2 sm:mb-3 font-sans tracking-tighter drop-shadow-sm">{stat.value}</div>
+                    <div className="text-[10px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-widest font-bold">{stat.label}</div>
+                  </div>
                 </div>
               </FadeIn>
             ))}

@@ -1,26 +1,26 @@
 import React from 'react';
-import { TrendingUp, MousePointerClick, FileEdit, Handshake } from 'lucide-react';
+import { Milestone, Crosshair, Wand2, Network } from 'lucide-react';
 import FadeIn from './animations/FadeIn';
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: <Milestone className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.2} />,
       title: "Japan SEO Strategy",
       desc: "Technical and content SEO optimized specifically for Yahoo! Japan and Google Japan algorithms. We build sustainable organic growth through deep keyword research and local intent mapping."
     },
     {
-      icon: <MousePointerClick className="w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: <Crosshair className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.2} />,
       title: "Localized PPC Campaigns",
       desc: "High-performing ad campaigns on Google Ads, Yahoo! Ads, and Facebook/Instagram. We manage budgets efficiently to lower CPA while capturing high-intent B2B and B2C leads."
     },
     {
-      icon: <FileEdit className="w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: <Wand2 className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.2} />,
       title: "Content Transcreation",
       desc: "More than translation—we rewrite blogs, LPs, and whitepapers from the ground up to ensure they resonate with Japanese cultural nuances and business etiquette."
     },
     {
-      icon: <Handshake className="w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: <Network className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.2} />,
       title: "B2B Trade & Sales Support",
       desc: "Digital support for trade shows, B2B lead generation, and sales enablement assets. We help your local sales team close deals with localized pitch decks and case studies."
     }
@@ -29,14 +29,19 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="py-20 sm:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 sm:mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-secondary tracking-tight">
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-px w-8 bg-primary/50 mr-3"></span>
+              <span className="text-primary font-bold tracking-wider uppercase text-sm">Our Expertise</span>
+              <span className="h-px w-8 bg-primary/50 ml-3"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-secondary mb-4 sm:mb-6 tracking-tight">
               Comprehensive Market Entry Services
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="mt-4 sm:mt-6 text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
               End-to-end digital support for your Japanese expansion. We don't just advise; we execute.
             </p>
           </FadeIn>
