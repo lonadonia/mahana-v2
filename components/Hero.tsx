@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
       {/* Darker Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* Simple dark overlay */}
-        <div className="absolute inset-0 bg-secondary/25"></div>
+        <div className="absolute inset-0 bg-secondary/47"></div>
         
         {/* Subtle Dot Pattern */}
         <div 
