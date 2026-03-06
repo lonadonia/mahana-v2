@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
       {/* Darker Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* Simple dark overlay */}
-        <div className="absolute inset-0 bg-secondary/35"></div>
+        <div className="absolute inset-0 bg-secondary/25"></div>
         
         {/* Subtle Dot Pattern */}
         <div 
@@ -47,12 +47,12 @@ const Hero: React.FC = () => {
           {/* Left Column: Text & Buttons */}
           <div className="lg:col-span-7 text-left space-y-6 sm:space-y-10">
             <FadeIn delay={0.2}>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-bold text-white leading-[1.2] tracking-tight drop-shadow-md">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-white leading-[1.1] tracking-tight drop-shadow-md">
                 Entering Japan Is Not a <br className="hidden lg:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 relative inline-block">
                   Marketing Problem
                 </span>.<br className="hidden sm:block" />
-                <span className="text-xl sm:text-3xl lg:text-4xl text-gray-300 mt-3 sm:mt-4 block font-medium tracking-normal">It’s a Market Adaptation Problem.</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 mt-3 sm:mt-4 block font-medium tracking-normal">It’s a Market Adaptation Problem.</span>
               </h1>
             </FadeIn>
             
